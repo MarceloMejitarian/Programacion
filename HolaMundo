@@ -1,0 +1,17 @@
+// HolaMundo.cpp : Defines the entry point for the console application.
+// Autor:Marcelo Andres  
+// Fecha:18 de Febrero de 2014
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+int main() 
+{
+	cout <<"No Fumar \n \n";
+	cout <<"No copien de los buenos en el examen";
+    getch ();
+    return 0;
+}
