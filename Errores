@@ -1,0 +1,24 @@
+/ erore.cpp : Defines the entry point for the console application.
+// autor: Marcelo Mejitarian
+// fecha: 25 de febrero de 2014
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main() {
+
+     float base, altura,area;
+     cout<<"       Calculo del area del triangulo \n\n ";
+	 cout<<"Ingrese base: ";
+     cin>>base;
+	 cout<<"Ingrese altura: ";
+	 cin>>altura;
+	 area =(base*altura)/2;
+	 cout<<"El area es: ";  
+	 cout<<area;
+     getch();
+}
+
