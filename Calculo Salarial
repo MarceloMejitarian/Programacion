@@ -1,0 +1,28 @@
+// Calcular salario.cpp : Defines the entry point for the console application.
+// Autor: Marcelo Andrés
+// Fecha: 19 de  Marzo de 2014
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main( )
+{
+      float salario, AFP, impuesto;
+      cout<<"Ingrese el salario:";
+      cin >> salario;
+      AFP = 0.12;
+      impuesto = 0.13;
+      if (salario > 2800)
+                        salario final= (salario*AFP)*impuesto;
+                        cout<<"Su salario real es:";
+                        cout<< salario final;
+      else
+         cout<<"Su salario real es:";
+         cout<< salario;
+         
+      getch( );
+}      
+    
