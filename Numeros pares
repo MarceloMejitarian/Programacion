@@ -1,0 +1,27 @@
+// Numeros par.cpp : Defines the entry point for the console application.
+// Autor: Marcelo Andres
+// Fecha: 25 de Marzo
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h" 
+
+using namespace std;
+int main ()
+{
+  int a,b,x;
+  cin>>a;
+  cin>>b;
+  if ((a%2==0)&&(b%2==0))
+  {  x=a*b; 
+	 cout<<x;
+  }
+  else 
+  {
+   x=a+b;
+   cout<<x;
+
+  }
+  getch ();
+}
