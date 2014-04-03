@@ -16,13 +16,16 @@ void main( )
       AFP = 0.12;
       impuesto = 0.13;
       if (salario > 2800)
-                        salario final= (salario*AFP)*impuesto;
-                        cout<<"Su salario real es:";
-                        cout<< salario final;
+                        {
+                         salario final= (salario*AFP)*impuesto;
+                         cout<<"Su salario real es:";
+                         cout<< salario final;
+                         }   
       else
+       { 
          cout<<"Su salario real es:";
          cout<< salario;
-         
+       }  
       getch( );
 }      
     
