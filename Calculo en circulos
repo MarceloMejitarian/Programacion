@@ -1,0 +1,30 @@
+// CalcularCincurferencia.cpp: define el punto de entrada de la aplicación de consola.
+// Autor: Marcelo Andres
+// Fecha: 2 de Abril de 2014
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float circunferencia, volumen, D, area, radio, pi;
+	cout << "          Calculo de la circunferencia \n \n ";
+	cout << " \n\ Ingrese el valor del diametro:";
+		cin >> D;
+		pi = 3.1416;
+		circunferencia = pi*D;
+		cout << " \n\ El valor de la circunferencia es: " << circunferencia;
+
+	    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		_getch ();
+}
