@@ -1,65 +1,55 @@
-// CalculoDeNota.cpp : Defines the entry point for the console application.
+// CalculoDeNotas.cpp: define el punto de entrada de la aplicación de consola.
 //
 
 #include "stdafx.h"
 #include <iostream>
 #include "conio.h"
-
 using namespace std;
-void main
 
- { 
-    float P1, P2, P3, Pr, Pf, NF; 
-	  {
-	     do 
-		  {   
-			  cout << "Ingrese el Parcial 1:"
-			  cin >> P1;
-		  }			
-			  while ((P1 > 100 || P1 < 0)&&(P1 != -99)); 
-           
-         do 
-		   { 
-			   cout << "Ingrese el Parcial 2:";
-               cin >> P2;
-		   }   
-			   while (P2 > 100 || P1 < 0); 
-         do
-		   {
-			   cout << "Ingrese el Parcial 3:";
-			   cin >> P3;
-		   }	   
-			   while (P3 > 100 || P3 < 0);
-          do
-		    {
-				cout << "Ingrese el Parcial 4:";
-				cin >> P4;
-			}	
-				while (P4 > 100 || P4 < 0); 
-          do
-		    {
-				cout << "Ingrese el Practico:";
-				cin >> Pr;
-			}	
-				while (Pr > 100 || Pr < 0); 
-		  do 
-		    {
-				cout << "Ingrese el Parcial Final:";
-				cin >> Pf;
-			}	
-				while (Pf > 100 || Pf < 0);
+int main()
 
-			    NF = ((P1+P2+P3)/3)*0.4+Pr*0.2+Pf*0.4;
-					cout << "La Nota Final del alumno es:";
-				    cout << NF;
-		  do
-		    {
-				cout << "\n\Ingrese el Parcial 1:";
-				cout << P1;
-			}
-			while ((P1 > 100 || P1 < 0) && (P1 != -99));
+{
+	float P1, P2, P3, Pr, Pf, NF; 
+	{
+		do
+		{
+			cout << "Ingrese el Parcial 1:";
+				cin >> P1;
+		} while ((P1 > 100 || P1 < 0) && (P1 != -99));
 
-	  }      
-       _getch();
+		do
+		{
+			cout << "Ingrese el Parcial 2:";
+			cin >> P2;
+		} while (P2 > 100 || P1 < 0);
+		do
+		{
+			cout << "Ingrese el Parcial 3:";
+			cin >> P3;
+		} while (P3 > 100 || P3 < 0);
+		do
+		{
+			cout << "Ingrese el Practico:";
+			cin >> Pr;
+		} while (Pr > 100 || Pr < 0);
+		do
+		{
+			cout << "Ingrese el Parcial Final:";
+			cin >> Pf;
+		} while (Pf > 100 || Pf < 0);
+
+		NF = ((P1 + P2 + P3) / 3)*0.4 + Pr*0.2 + Pf*0.4;
+		cout << "La Nota Final del alumno es:";
+		cout << NF;
+		do
+		{
+			cout << "\n\ Ingrese el Parcial 1:";
+	
+		} while ((P1 > 100 || P1 < 0) && (P1 != -99));
+
+		_getch();
+	}
+	return P1;
 
 }
+
