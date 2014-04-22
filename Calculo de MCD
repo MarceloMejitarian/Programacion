@@ -1,4 +1,4 @@
-// Calculo MCD.cpp : Defines the entry point for the console application.
+/ Calculo MCD.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -7,34 +7,37 @@
 using namespace std;
 int main()
 {
-	int a, b, c, MCD, cont, men; 
-	cout<< " ingrese a";
-	cin >> a;
+int a, b, c, MCD, cont, men;
+cout<< " ingrese a";
+cin >> a;
     cout<< " ingrese b";
     cin >> b;
     cout<< " ingrese c";
     cin >> c;
     if (a<b && b<c)
-      men = b;
-	else 
-      men = c;
+      men = a;
+	else
+		if (b<a && b<c)
+			men = b;
+		else
+			men = c;
     MCD = 1;
     cont = 2;
     while (cont <= men)
-	{
-		if ((a%cont == 0) && (b%cont == 0) && (c%cont == 0))
-		{           
-			a = a/cont; 
+   {
+   if ((a%cont == 0) && (b%cont == 0) && (c%cont == 0))
+   {
+            a = a/cont;
             b = b/cont;
             c = c/cont;
-	      men = men/cont;
-          MCD = MCD * cont;  
-		}
-		cont = cont + 1;
-	}
+           men = men/cont;
+          MCD = MCD * cont;
+		  cont = cont - 1;
+}
+cont = cont + 1;
+}
    cout << "MCD";
    cout << MCD;
    _getch ();
-   
    return 0;
 }
