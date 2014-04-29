@@ -1,0 +1,50 @@
+// Practico.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{
+	float P, C;
+	cout << " Ingrese el peso de la carta: ";
+    cin >> P;
+    if (0 < P < 50)
+	{
+		C = 1.50;
+	    cout << " El valor a pagar en Bs: ";
+        cout << C;
+	}
+    if (50 < P <= 100)
+	{
+		C = 4;
+        cout << " El valor a pagar en Bs: ";
+        cout << C;
+	}
+    if (100 < P <= 200) 
+	{
+        C = 6;
+        cout << " El valor a pagar en Bs: ";
+        cout << C;
+	}
+    if (200 < P <= 350)
+	{
+        C = 10.5;
+        cout << " El valor a pagar en Bs: ";
+        cout << C;
+	}
+    if (350 < P <= 500)
+	{
+        C = 15;
+        cout << " El valor a pagar en Bs: ";
+        cout << C;
+	}
+    if (P > 500)
+	{
+        cout << " No puede enviar como carta ";
+	}
+  _getch(); 
+
+}
