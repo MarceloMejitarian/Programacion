@@ -10,20 +10,24 @@ using namespace std;
 
 void main()
 {
-	float salario, AFP, impuesto,final;
+	float salario, AFP, impuesto, final;
 	cout << "Ingrese el salario:";
 	cin >> salario;
 	AFP = 0.12;
 	impuesto = 0.13;
 	if (salario > 2800)
-	 { 
+	{
 		final = (salario*AFP)*impuesto;
 		cout << "Su salario real es:" << final;
-	 }
-	else (salario * 1);
+	}
+	else
 	{
-		cout << "Su salario es:";
-		cout << salario;
+		if (salario < 2800)
+		{
+			salario = salario * 1;
+			cout << "Su salario es:";
+			cout << salario;
+		}
 	}
 	_getch();
 }
