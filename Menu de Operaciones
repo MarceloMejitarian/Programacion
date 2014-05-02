@@ -4,47 +4,56 @@
 #include "stdafx.h"
 #include <iostream>
 #include "conio.h"
-#include "stdlib.h"
+
 
 using namespace std;
-int main ()
+int main()
 {
-	int a, b, op, R; 
-  do    
-  {
-    cout << " \t\ Menu \t\ ";
-	cout << " Ingrese A: ";
-    cin >> a;
-    cout << " Ingrese B: ";
-    cin >> b;
-	cout << " Elija una opcion ";
-    cout << " Opcion 1 es suma \n\ Opcion 2 es resta \n\Opcion 3 es multiplicacion \n\ opcion 4 es division \n\ opcion 0 es salir"; 
-	cin >> op;
-    if (op == 1)
-	{	
-        R = a + b;
-        cout << R;
-	}
-	  else (op == 2);
-	   {
-		   R = a - b;
-           cout << R;
-	   }
-     if (op = 3)
-	   {
-		   R = a * b;
-           cout << R;
-	   }
-	 else (op == 4);
-	   {
-          R = a / b;
-          cout << R;
-	   }
+	int a, b, op, R;
+	do
+	{
+		cout << "  Menu  ";
+		cout << " Ingrese A: ";
+		cin >> a;
+		cout << " Ingrese B: ";
+		cin >> b;
+		cout << " Elija una opcion ";
+		cout << " Opcion 1 es suma \n\ Opcion 2 es resta \n\Opcion 3 es multiplicacion \n\ opcion 4 es division \n\ opcion 0 es salir";
+		cin >> op;
+		if (op == 1)
+		{
+			R = a + b;
+			cout << R;
+		}
+		else
+		{
+			if (op == 2)
+			{
+				R = a - b;
+				cout << R;
+			}
+			else
+			{
+				if (op = 3)
+				{
+					R = a * b;
+					cout << R;
+				}
+				else
+				{
+					if (op == 4);
+					{
+						R = a / b;
+						cout << R;
+					}
+				}
+			}
+		}
 
-     
-  }
-	 while (op =!0);
 
- _getch ();
- return 0;
+	} 
+	while (op = !0);
+
+	_getch();
+	return 0;
 }
