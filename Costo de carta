@@ -6,45 +6,58 @@
 #include "conio.h"
 
 using namespace std;
-void main ()
+void main()
 {
 	float P, C;
 	cout << " Ingrese el peso de la carta: ";
-    cin >> P;
-    if (0 < P < 50)
+	cin >> P;
+	if ((0 < P) && (P < 50))
 	{
 		C = 1.50;
-	    cout << " El valor a pagar en Bs: ";
-        cout << C;
+		cout << " El valor a pagar en Bs: ";
+		cout << C;
 	}
-    if (50 < P <= 100)
+	else
 	{
-		C = 4;
-        cout << " El valor a pagar en Bs: ";
-        cout << C;
+		if ((50 < P) && (P <= 100))
+		{
+			C = 4;
+			cout << " El valor a pagar en Bs: ";
+			cout << C;
+		}
+		else
+		{
+			if ((100 < P) && (P <= 200))
+			{
+				C = 6;
+				cout << " El valor a pagar en Bs: ";
+				cout << C;
+			}
+			else
+			{
+				if ((200 < P) && (P <= 350))
+				{
+					C = 10.5;
+					cout << " El valor a pagar en Bs: ";
+					cout << C;
+				}
+				else
+				{
+					if ((350 < P) && (P <= 500))
+					{
+						C = 15;
+						cout << " El valor a pagar en Bs: ";
+						cout << C;
+					}
+					else
+					{
+						if (P > 500)
+							cout << " No puede enviar como carta ";
+					}
+				}
+			}
+		}
 	}
-    if (100 < P <= 200) 
-	{
-        C = 6;
-        cout << " El valor a pagar en Bs: ";
-        cout << C;
-	}
-    if (200 < P <= 350)
-	{
-        C = 10.5;
-        cout << " El valor a pagar en Bs: ";
-        cout << C;
-	}
-    if (350 < P <= 500)
-	{
-        C = 15;
-        cout << " El valor a pagar en Bs: ";
-        cout << C;
-	}
-    if (P > 500)
-	{
-        cout << " No puede enviar como carta ";
-	}
-  _getch(); 
+	_getch();
 
 }
