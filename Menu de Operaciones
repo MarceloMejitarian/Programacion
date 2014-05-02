@@ -34,7 +34,7 @@ int main()
 			}
 			else
 			{
-				if (op = 3)
+				if (op == 3)
 				{
 					R = a * b;
 					cout << R;
@@ -52,7 +52,7 @@ int main()
 
 
 	} 
-	while (op = !0);
+	while (op =! 0);
 
 	_getch();
 	return 0;
