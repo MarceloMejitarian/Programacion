@@ -1,0 +1,36 @@
+// Funciones.cpp: define el punto de entrada de la aplicación de consola.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int Potencia(float Numero, float Exponente);
+void main()
+{
+	float N, Pot, E;
+	cout << "Ingrese el número:";
+	cin >> N;
+	cout << "Ingrese el valor del exponente:";
+	cin >> E;
+	Pot = Potencia(N,E);
+	cout << "El valor de la potencia es:";
+	cout << Pot;
+	_getch();
+}
+int Potencia(float Numero, float Exponente)
+{
+	int Num, Exp, i;
+	Num = 1;
+	Exp = 1;
+	i = 0;
+	while (i <= Exp)
+	{
+		Exp = Exp + 1;
+		Num = Num * Num;
+		i = i + 1;
+	}
+	return Num;
+}
