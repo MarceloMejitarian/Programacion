@@ -1,0 +1,24 @@
+#include "stdfax.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h
+
+using namespace std;
+
+void main ()
+
+{
+  int S, N, x;
+  float i;
+  cout << " Ingrese el valor de N:";
+  cin >> N;
+  cout << " Ingrese el valor de x:";
+  cin >> x;
+  S = 0;
+  for (i = 1; i <= N; i++)
+          S = S + pow(x,i);
+  cout << " El resultado de la serie es:";
+  cout << S;
+  _getch();
+}  
+  
