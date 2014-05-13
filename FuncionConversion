@@ -1,0 +1,37 @@
+// FuncionBinaria.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h" 
+#include <iostream>
+#include "math.h"
+using namespace std;
+
+int Conversion(int N1, int Bas);
+int main()
+{                               
+	int Conv, N1; 
+	cout<<" Ingrese el numero: ";
+	cin >>N1;
+	Conv = Conversion( N1 , 2);
+	cout<<" El numero es: ";
+	cout<<Conv;	 
+	_getch();
+	return 0;
+}
+
+int Conversion(int N1, int Bas)
+{
+	int D, Conv;   
+	float i;
+	Conv = 0;
+	i = 0;
+	while (N1 > 0)
+	{
+        D = N1 % 10;
+	    N1 = N1 / 10;
+		Conv = Conv + D * pow(Bas,i);
+        i = i + 1;
+	}
+	return (Conv);
+}
