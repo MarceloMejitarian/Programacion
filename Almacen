@@ -1,0 +1,86 @@
+#include "stdfax.h"
+#include "conio.h"
+#include "vector"
+
+using namespace std;
+
+void main()
+{
+  int product[] = { " Resistencia " , " Bobina " , " Condensador " } 
+  
+  
+  
+  
+  cout << " 1.- Ingreso de datos ";
+  cout << " 2.- Hacer pedidos ";
+  cout << " 3.- Mostrar informe ";
+  cout << " 4.- Salir ";
+  cin >> op1;
+  switch (op1) 
+  {
+   case 1:
+         {
+           cout << " 1.- Tipo de producto ";
+           cout << " 2.- Cantidad ";
+           cout << " 3.- Precio unitario ";
+           switch (op2)
+           {
+            case 1:  
+                  cout << " Ingrese el nombre del producto: ";
+                  cin >> Pro;
+                  //Aqui ya entraria product[0] que equivaldria a resistencia. Algo asi product[0] = resistencia
+                  //La posicion 0 es resistencia
+                  if ( Pro == Product[0] )
+                  //Podemos exibir la tolerancia sin que el usuario pida, que te parece? 
+                    
+       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
