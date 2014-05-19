@@ -1,0 +1,10 @@
+Planteamiento del Trabajo
+ La estructura del algoritmo consiste en un menú principal y dos submenús, los menús y submenús usan la función switch, la cual permite que el programa no quede extenso innecesariamente. Con relación a los datos, estos usan la función vector para poder almacenarlos en la memoria para uso posterior.   
+ 
+Objetivo del trabajo
+ El objetivo del programa es organizar, contabilizar y principalmente almacenar la cantidad de componentes electrónicos usados por personas o instituciones involucradas en el área de la electrónica. 
+
+Método de solución
+ Para poder solucionar el problema de la contabilidad del almacén, el programa buscará si hay el tipo de producto pedido por el usuario, cuando lo encuentre pedirá cuantos querrá para después, al final, mostrar el monto final de todo lo pedido antes. Para que no queden los productos antes pedidos el algoritmo descontara los elementos que se hayan usado.    
+Explicación del proyecto
+ Cuando se pensó en desarrollar el algoritmo se decidió usar la función switch que usa menos espacio de memoria y disminuye la extensión del programa, se puede también organizar mejor los submenús que irán dentro de las opciones del menú principal. Ya que se necesitó varias variables y no es viable usar variables que ocupen espacio cada una, se pensó usar la función vector la cual permite guardar y organizar posicionalmente varios elementos declarados en un solo espacio de memoria pero con nombre diferente, esto ahorra uso de memoria y fluye con más rapidez la cantidad de datos a ser procesada.        
