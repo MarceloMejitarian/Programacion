@@ -1,0 +1,52 @@
+// CalculoDeNotasArrays.cpp: define el punto de entrada de la aplicación de consola.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdlib.h"
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int N, Ap, Re, S;
+	float P1, P2, P3, NPr, EFi;
+	char Nombre[40];
+	cout << "Ingrese el numero de estudiantes:";
+	cin >> N;
+	cout << "Ingrese el nombre:";
+	gets_s(Nombre);
+	cout << " Ingrese las notas del: parcial 1, parcial 2, parcial 3, nota practica y examen final ";
+	cin >> P1;
+	cin >> P2;
+	cin >> P3;
+	cin >> NPr;
+	cin >> EFi;
+	system "(cls)";
+		S = 0; 
+		for (int i = 0; i <= N; i++)
+		{
+			 NP[i] = NPr * 0.2;
+			 PP[i] = (P1 + P2 + P3 / 3) *0.4;
+			 PF[i] = EFi * 0.4;
+			 NF[i] = NP[i] + PP[i] + PF[i];
+			 cout << " \n\n Lista de Notas   ";
+			 cout << " Nombre \n NP \n PP \n PF \n NF ";
+			 cout << " Nombre \n NP[i] \n PP[i] \n PF[i] \n NF[i] ";
+			 S = S + NF[i];
+         }
+		double Pro = +S / N;
+		Ap = 0;
+		Re = 0;
+		for (int i = 0; i <= N; i++)
+		{
+			if (NF[i] > 50)
+				Ap = +1;
+			else
+				Re = +1;
+		}
+		_getch();
+	return 0;
+}
+
