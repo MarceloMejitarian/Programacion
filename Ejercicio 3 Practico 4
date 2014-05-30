@@ -1,0 +1,23 @@
+// Ejercicio 3 Practico 4.cpp: define el punto de entrada de la aplicación de consola.
+// 
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdlib.h"
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int Vec[] = { 1, 4, 7, 9, 5 };
+	float Pro;
+	int S = 0;
+	for (int i = 0; i < 5; i++)
+		S = S + Vec[i];
+	Pro = S / 5;
+	cout << Pro;
+	_getch();
+	return 0;
+}
+
