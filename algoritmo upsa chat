@@ -1,0 +1,62 @@
+
+// nombre: UPSACHAT.cpp : main project file.//
+// autor:Noelia Franco Alejandro//
+// fecha: 1/06/14 //
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+using namespace std;
+
+void main ()
+{
+int i,num,op;
+int registro [500];
+int contraseña[300];
+{
+cout<< "****************** MENU***************************";
+cout<< "-------UPSA CHAT---------";
+cout<< "       ==== ====         ";
+	do
+	{
+		cout<< "1. CREAR USUARIO";
+		cout<< "== ===== =======\n"; 
+		cout<< "2. INICIAR SESION";
+		cout<< "== ======= ======\n";
+		cout<< "INGRESE OPCION";
+		cin>> op;
+		{
+			switch (op)
+		    {
+			case 1:
+            cout<< "INGRESE CANTIDAD DE USUARIO QUE DESEA REGISTRAR";
+            cin>> num;
+            for(i=1;i<=num;i++)
+             { 
+	          cout<<"ingrese codigo de registro["<<i<<"]";
+	          cout<< "=";
+	          cin>> registro[i];
+	          cout<< "ingrese contraseña de maximo 3 numeros["<<i<<"]";
+              cout<<"=";
+	          cin>> contraseña[i];
+		      }
+             cout<< "\n\IMPRESION DE VECTORES"<<endl;
+             cout<< "\n\ ======="<<endl;
+
+             for(i=1;i<=num;i++)
+             {
+ 
+             cout<<" codigo de registro["<<i<<"]";
+	         cout<< "=";
+             cout<< registro[i];
+	         cout<< "contraseña de maximo 3 numeros["<<i<<"]";
+             cout<<"=";
+	         cout<< contraseña[i];
+             }
+			case 2:
+
+			}
+
+getch();
+}
