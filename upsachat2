@@ -79,9 +79,9 @@ using namespace std;
 void main ()
 {
  
-  string usuario[100];
+  char usuario[100];
   cout<<"ingrese nombre";
-  getline(cin,usuario[100]);
+  cin.getline(usuario, 100);
   cout<< "los nombres guardados son";
   cout<< "==";
   cout<<usuario<<endl;
