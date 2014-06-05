@@ -1,0 +1,35 @@
+// Conecnntion.cpp: define el punto de entrada de la aplicación de consola.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <winsock2.h>
+#pragma comment(lib, "ws2_32.lib")
+
+int main()
+{
+	WSAData wsa;
+	WORD Version = MAKEWORD(2, 1);
+	
+	WSAStartup(Version, &wsa);
+	
+	SOCKADDR_IN Client;
+	
+	Client.sin_addr.s_addr = inet_addr("192.168.1.100");
+	Client.sin_family = AF_INET;
+	Client.sin_port = htons(555);
+	
+	SOCKET Connect = socket(AF_INET, SOCK_STREAM, NULL);
+
+	std::cout << "Press enter to continue...";
+
+	for (;;)
+	{
+		if (connect(Connect, (SOCKADDR*)&Client, sizeof(Client)))
+			break;
+	}
+	std::cout << "Connection sent!";
+	std::cin.get();
+	return 0;
+}
+
