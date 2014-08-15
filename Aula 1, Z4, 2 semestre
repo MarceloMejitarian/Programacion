@@ -1,27 +1,79 @@
-// Aula 1.cpp : Defines the entry point for the console application.
-//
+//AulaFunciones.cpp
 
 #include "stdafx.h"
 #include "conio.h"
 #include <iostream>
 using namespace std;
+
+int DigitoSumaImpar(int a)
+
+int Invertir(int a)
+
+int DigitoCanti(int a);
+
 int Divi(int a,int b);
-bool validarDivi(int a,int b);
+
+bool validar(int a,int b);
+
 int Multi (int a, int b);
+
+bool ValidarOpcion(int c);
+
 int main()
 
 {
-  int x,y,P;
-  cout << "Introducir un numeros";
+  int x,y,P,op;
+  cout << "Introducir un numero";
   cin >> x;
   cout << "Introduzca otro";
   cin >> y;
-  while (validarDivi(x,y) == false);   
-  P = Divi(x,y);
-  cout << "El numero es:" << P; 
+  while (validar(x,y) == false); 
+  Cout << "Sumar impares 1";
+  cout << "Invertir 2";
+  cout << "Cantidad 3";
+  cout << "Division 4";
+  cout << "Multiplicación 5";
+  cin >> op;
+  while (ValidarOpcion(op) == false);
+  switch (op)
+   {
+    Case 1:
+     {
+      P = DigitoSumaImpares (x);
+      cout << "El numero es:" << P; 
+      break;
+     }
+    Case 2:
+     {
+       P =  Invertir(x);
+       cout << "El numero es:" << P;
+       break;
+     }
+    Case 3:
+     { 
+       P = DigitoCanti(x);
+       cout << "El numero es:" << P;
+       break;
+     }
+    Case 4:
+     {
+       P = Divi(x,y);
+       cout << "El numero es:" << P;
+       break;
+     }
+    Case 5:
+     {
+       P = Multi(x,y);
+       cout << "El numero es:" << P;
+       break;
+     }
+        
   _getch();
-	return 0;
+
+  return 0;
 }
+
+
 
 int Divi(int a , int b)   
 { 
@@ -39,10 +91,36 @@ int Multi(int a, int b)
 {
    int S=0, i;
    for (i = 0;i < b;i++)
-	   S = S+ a;
-return (S);
+	{  
+         S = S+ a;
+        }
+   return (S);
 }
-bool validarDivi(int a , int b) 
+
+
+bool ValidarOpcion(int c)
+{
+   bool j=false;
+    if (c => 1) && (c <= 5)
+     {
+        j=true;
+     }   
+    else
+     {
+       if (c < 1)
+       {
+         cout << "No existe tal opcion";
+       }
+       if (c > 5)
+       {    
+         cout << "No existe tal opcion";
+       }
+     }
+  return(j);
+}
+
+
+bool validar(int a , int b) 
 {
 	bool k=false;
 	if (a > 0) && (b > 0) && (a%b == 0)) 
@@ -52,22 +130,62 @@ bool validarDivi(int a , int b)
 	else   
 	{
       if (a <= 0)
-	  {  cout <<"Datos invàlidos, nùmeros deben ser mayores a cero ";
+	  {
+            cout <<"Datos invàlidos, nùmeros deben ser mayores a cero ";
 	  }
       if (b <= 0)
-	  { cout << "Datos invàlidos, nùmeros deben ser mayores a cero ";
+	  { 
+            cout << "Datos invàlidos, nùmeros deben ser mayores a cero ";
 	  }	 
 	  if (b > 0)
 	  { if (a%b != 0)
 	    cout << " No se puede realizar la divisiòn exacta";
 	  }
 	  else
-	  {cout << "No se puede divisiòn entre cero";
+	  {
+           cout << "No se puede divisiòn entre cero";
 	  }
-	  }
+        }
 
     return(k);
 }
 
-/* Traet dos funciones màs la cantidad de dìgitos de un numero natural, debe retornar la suma de los dìgitos
-impares, invertir el nùmero.
+
+ int DigitoCanti(int a)
+ {
+   int i=0;
+   while (a > 0)
+  {          
+     a=a/10;
+     i=i+1;
+  }
+  return(i);
+ } 
+
+
+ int DigitoSumaImpar(int a)
+{ 
+  int S=0;
+  while (a > 0)   
+  {
+    d=a%10;
+    if (d%2 != 0)
+    {
+      S=S+d;
+    }
+    a=a/10;
+   }
+   return (S);
+}
+
+
+ int Invertir(int a)
+{
+  int W=0;
+  while (a > 0)
+  {
+     d=a%10;
+     W=W*10+d;
+  }
+ return(W);
+}
