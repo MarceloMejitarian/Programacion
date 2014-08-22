@@ -1,0 +1,171 @@
+// Aula Vectores.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+int VerificarElementoV (int vec [], int n, int e);
+int SumaElemnetos (int vec [], int n);
+void SumaEntreV (int vec[], int dec[], int rec[], int n)
+void GenerarV (int vec[] , int n);
+void MostrarV (int vec[] , int n);
+int VerificarRepeticionV (int vec[], int n, int e);
+
+
+int main ()
+{
+   int v[30], E=0,op, d[30], r[30], m;
+   do
+   {
+	   cout << "     MENU        ";
+	   cout << " 1- Generar vector ";
+       cout << " 2- Mostrar vector ";
+	   cout << " 3- Sumar elementos del vector ";
+	   cout << " 4- Verificar existencia de elemnetos ";
+	   cout << " Seleccione una opcion ";
+	   cin >> op;
+       switch (op)
+	   {
+	   case 1 : 
+		        cout << "Introducir tamanho de la matriz ";
+                cin >> E;
+				GenerarV(v,E);
+				break;
+	   case 2 : 
+		        MostrarV(v,E);
+				break;
+	   case 3 :
+		       cout << " La suma de los elementos es:"
+			   cout << SumaElemnetos(v,E);
+               break;
+	   case 4 :
+		       cout << " Introducir elemento a buscar ";
+			   cin >> m;
+			   if (VerificarElementoV (v, E,m)
+			   {
+				   cout <<" El elemento si existe ";
+
+
+
+		       
+              
+
+
+
+
+
+
+	   case 6 :
+		       cout << " Introducir numero de elementos ";
+			   cin >> E;
+			   cout << " Itroducir datos del primer vector ";
+			   cin >> GenerarV(v,E);
+			   cout << " Inroducir datos del segundo vector ";
+			   cin >> GenerarV(d,E);
+			   SumarEntreV(v,d,r,E);
+			   MostrarV(v,E);
+			   MostrarV(d,E);
+               MostrarV(r,E);
+			   break;
+	   case 7 :
+		       cout << " Introducir el numero de terminos ";
+			   cin >> E;
+               GenerarPolinomioV (v,d,n)
+               break; 
+			   
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+}
+ void GenerarV (int vec[] , int n)
+ {
+	 int i;
+	 for (i=0; i<n; i++)
+	 {
+		 cout << "Introducir numero ";
+		 cin >> vec[i] ;
+	 }
+ }
+
+void MostrarV (int vec[] , int n)
+{
+	int i;
+	cout << " Las componentes del vector son : ";
+	for (i=0;i<n;i++)
+	{
+		cout << vec[i];
+	}
+}
+
+int SumaElemnetos (int vec [], int n)
+{
+	int i, S=0;
+	for (i=0;i<n;i++)
+	{
+		S=S+vec[i];
+	}
+}
+
+
+int VerificarElementoV (int vec [], int n, int e)
+{
+	int i;
+    bool k= false;
+	for(i=0;i<n;i++)
+	{
+		if (vec[i] == e)
+		{
+			k = true
+		}
+	}
+   return(k);
+}
+
+int VerificarRepeticionV (int vec[], int n, int e)
+{
+	int i, c=0;
+	for (i=0;i<n;i++)
+	{
+		if(vec[i] == e)
+		{
+			c++
+		}
+    }
+   return(c)
+}
+
+
+void SumaEntreV (int vec[], int dec[], int rec[], int n)
+{
+	int i,
+	for (i=0;i<n;i++)
+	{
+		 rec[i]=vec[i]+dec[i];
+	}
+}
+
+void GenerarPolinomioV (int vec[], int dec[], int n)
+{
+	int i
+    for (i=0;i<n;i++)
+	{
+		cout << 
+
+
+
+
+
+
+
