@@ -1,0 +1,140 @@
+// Cadenas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <string.h>
+using namespace std; 
+
+int ContarVocalesCad(char c[]);
+void ExtraerCadenaDeOtra(char c[], int t, int e, char d[]);
+
+void ExcluirConsonantesCad(char c[]);
+void MostrarCharPorCharCad(char c[]);
+
+
+
+int main()
+{
+  int op, r;
+  char C[100];
+  cout << endl << "Escriba lo q quiera" << endl;
+  
+  gets(C);
+  cout << endl << "Selecione una opciòn";
+  cout << endl << "1.- Contar vocales";
+  cout << endl << "2.- tytyttte";
+  cout << endl << "3.- Eliminar vocales";
+  cout << endl << "4.- Pyromide!";
+  cout << endl << "5.- Pyromide INV"; 
+  cin >> op;
+  switch (op)
+  {
+  case 1 : ;
+           r = ContarVocalesCad(C);
+		   cout << endl << "El numero de vocales es:" <<r;
+	       break;
+  case 2 : cout << "nya";
+           break; 
+
+
+
+
+  case 3: 
+	      gets(C);
+		  ExcluirConsonantesCad(C);
+          break;
+  case 4: 
+	      gets(C);
+		  MostrarCharPorCharCad(C);
+          break;
+		  
+
+  }
+
+    _getch();
+	return 0;
+}
+
+
+int ContarVocalesCad(char c[])
+{
+	int i,t,s,o,n;
+	char e[]={'a','e','i','o','u','A','E','I','O','U'}; 
+    o =strlen(e);
+	n=strlen(c);
+	for (i=0;i<n;i++)
+	{
+		for(t=i;t < o;t++)
+		{
+			if (c[i]==e[i])
+			{
+				s++;
+			}
+		}
+	}
+	return s;
+} 
+
+void ExtraerCadenaDeOtra(char c[], int t, int e, char d[])
+{
+	int i, r,s=0;
+    e=e-1;
+	r= t+ e;
+	while (s <= e)
+	{
+	   for (i=t; i<r; i++)
+	    {
+			d[s]=c[i];
+			s++;
+	   }
+	   d[s]='\0';
+	}
+}
+
+
+void ExcluirConsonantesCad(char c[])
+{
+	int i,s=0;
+    for (i=0;i < strlen(c);i++)
+	{
+		if ((c[i]!= 'a') || (c[i]!= 'e') || (c[i]!='i') || (c[i]!='o') || (c[i]!='u') || (c[i]!='A') || (c[i]!='E') || (c[i]!='I') || (c[i]!='O') || (c[i]!='U'))
+		{
+			c[s]=c[i];
+			s++;
+		}
+	}
+	c[s]='\0';
+}
+
+void MostrarCharPorCharCad(char c[])
+{
+	int i,n;
+	char d[50];
+	n=strlen(c);
+	for (i=0; i< n;i++)
+	{
+     ExtraerCadenaDeOtra(c,1,i+1,d);
+     cout <<endl << d;
+	}
+}
+
+void MostrarCharPorCharInvertidoCad(char c[])
+{
+    int i,n;
+	char d[50];
+	n=strlen(c);
+	for (i=0; i<n;i++)
+	{
+     ExtraerCadenaDeOtra(c,1,n-i,d);
+     cout << endl <<d;
+	}
+}
+
+
+
+
+
+
+
