@@ -1,0 +1,243 @@
+// Practico1.cpp: define el punto de entrada de la aplicación de consola.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+#include "stdlib.h"
+
+using namespace std;
+void Concatenar(int a, int b);
+void EliminarRepetidos(int a);
+int Invertir(int a);
+int EliminarMayor(int a);
+void InsertarNumero(int a, int b);
+void VerifCapicua(int a);
+void AdivinarNumero(int a);
+int VerifCrapulo(int a);
+
+
+
+
+int main()
+{
+	int A, B, op, r;
+	do
+	{
+		cout << endl;
+		cout << "Escoja una opcion";
+		cout << endl << "1.-Concatenar";
+		cout << endl << "2.-Eliminar repetidos" << endl;
+		cout << endl << "3.-Invertir numero" << endl;
+		cout << endl << "4.-Eliminar digito mayor" << endl;
+		cout << endl << "5.-Insertar un numero" << endl;
+		cout << endl << "6.-Verificar numero capicua" << endl;
+		cout << endl << "8.-Adivinar numero" << endl;
+		cout << endl << "9.-Calcular el crapulo de un numero" << endl;
+		cin >> op;
+		system("cls");
+		switch (op)
+		{
+		case 1: cout << "Introduzca el primer numero natural";
+			cin >> A;
+			cout << "Introduzca el segundo numero natural";
+			cin >> B;
+			Concatenar(A, B);
+			break;
+		case 2: cout << endl << " Introduzca el numero natural" << endl;
+			cin >> A;
+			EliminarRepetidos(A);
+			break;
+		case 3: cout << endl << " Introduzca el numero a invertir " << endl;
+			cin >> A;
+			r=Invertir(A);
+			cout << "El numero invertido es";
+			cout << endl << r;
+		    break;
+		case 4: cout << endl << "Introduzca el numero" << endl;
+			cin >> A;
+			r = EliminarMayor(A);
+			cout << "El nuevo numero es" << endl;
+			cout << endl << r;
+			break;
+		case 5: cout << "Introduzca un numero" << endl;
+			cin >> A;
+			cout << "Introduzca el numero a insertar" << endl;
+			cin >> B;
+			InsertarNumero(A, B);
+			break;
+		case 6: cout << "Introduzca el numero" << endl;
+			cin >> A;
+			VerifCapicua(A);
+			break;
+		case 8: cout << "Introduzca el  numero " << endl;
+			cin >> A;
+			AdivinarNumero(A);
+			break;
+		case 9: cout << "Introduzca el numero" << endl;
+			cin >> A;
+			r = VerifCrapulo(A);
+			cout << " El valor del crapulo del numero " << A << " es " << r;
+			break;
+
+		}
+
+
+
+
+
+
+	} while (op != 0);
+		_getch();
+	return 0;
+}
+
+
+
+/*1☺*/void Concatenar(int a, int b)
+{
+	int mayor, menor, nuevnum, i = 0, D;
+	if (a > b)
+	{
+		mayor = a;
+		menor = b;
+	}
+	else
+	{
+		mayor = b;
+		menor = a;
+	}
+	D = mayor;
+	do
+	{
+		D = D / 10;
+		i++;
+	} while (D > 0);
+	menor = menor * pow(10, i);
+	nuevnum = menor + mayor;
+	cout << "El numero concatenado es";
+	cout << nuevnum;
+}
+
+/*2*/void EliminarRepetidos(int a)
+{
+	int D, E;
+	while (a > 0)
+	{
+		D = a % 10;
+		a = a / 10;
+		E = a % 10;
+		if (D == E)
+		{
+			cout << "nya";
+		}
+	}
+}//Incompleto
+
+/*3☺*/int Invertir(int a)
+{
+	int D, nuevonum = 0;
+	while (a > 0)
+	{
+		D = a % 10;
+		nuevonum = nuevonum * 10 + D;
+		a = a / 10;
+	}
+	return nuevonum;
+} 
+
+/*4*/int EliminarMayor(int a)
+{
+	int r=0, D, mayor = 0, t = -1;
+	while (a > 0)
+	{
+		D = a % 10;
+		a = a / 10;
+		if (D >= mayor)
+		{
+			mayor = D;
+		}
+	}
+	return r;
+}//Incompleto
+
+/*5*/void InsertarNumero(int a, int b)
+{
+	int i=4;
+	if (a == b)
+	{ 
+		i++;
+	}
+
+}
+
+
+
+
+/*6☺*/ void VerifCapicua(int a)
+{
+	int r;
+	r = Invertir(a);
+	if (a == r)
+	{
+		cout << "El numero es capicua";
+		cout << endl << a << "****" << r;
+	}
+	else
+	{
+		cout << "El numero no es capicua";
+		cout << endl << a << "****" << r;
+	}
+}
+
+/*8☺*/void AdivinarNumero(int a)
+{
+	int s;
+	s = rand() % 100 + 1;
+	do
+	{
+        if (a > s)
+		{
+			cout << "Demasiado grande!";
+		}
+		else
+		if (a < s)
+		{
+			cout << "Demasiado pequeño! n00b";
+		}
+		cout << endl << "Adivine otra vez" << endl;
+		cin >> a;
+
+	} while (a != s);
+	cout << "Correcto! PRO";
+}
+
+/*9☺*/ int VerifCrapulo(int a)
+{
+	int D, S = 0, T = 0, E;
+	while (a > 0)
+	{
+		D = a % 10;
+		a = a / 10;
+		S = S + D;
+	}
+	if (S > 10)
+	{
+		while (S > 0)
+		{
+			E = S % 10;
+			S = S / 10;
+			T = T + E;
+		}
+		return T;
+	}
+	
+	return S;
+}
+
+
+
+
+
+
