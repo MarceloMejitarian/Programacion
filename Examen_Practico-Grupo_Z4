@@ -1,0 +1,137 @@
+// ExamenPractico.cpp : Defines the entry point for the console application.
+//
+
+#include "conio.h"
+#include <iostream>
+#include "stdlib.h"
+using namespace std;
+
+
+
+void ModificarElementosVector(int v[], int n);
+void CargarVector (int v[], int n);
+void MostrarVector (int v[], int n);
+bool VerifFibo(int e);
+bool VerifPrimo(int a);
+int main()
+{
+	int op, N, V[50]={0};
+	do
+	{
+	cout << "-----Menu----" <<endl;
+	cout << "1.-Cargar vector" << endl;
+	cout << "2.-Mostrar vector" << endl;
+	cout << "3.-Modificar elementos de un vector" << endl;
+	cin >> op;
+	system("cls");
+	switch(op)
+	{
+	case 1 : cout << "Introduzca el numero de elementos " << endl;
+		cin>>N;
+		CargarVector(V,N);
+		break;
+	case 2: cout << "Introduzca el numero de elementos " << endl;
+		cin>>N;
+		MostrarVector(V,N);
+		break;
+	case 3: cout << "Introduzca el numero de elementos " << endl;
+		cin>>N;
+		CargarVector(V,N);
+		ModificarElementosVector(V,N);
+		MostrarVector(V,N);
+		break;
+	}
+
+	}while(op!=0);
+	_getch();
+	return 0;
+}
+
+void CargarVector(int v [], int n)
+{
+  int i;
+  for (i=0;i<n;i++)
+  {
+	  cout << "Introduzca el elemento" << endl;
+	  cin >> v[i];
+  }
+}
+
+void MostrarVector(int v [], int n)
+{
+  int i;
+  	  cout << "Estos son los elementos" << endl;
+  for (i=0;i<n;i++)
+  {
+	  cout << endl << v[i];
+  }
+}
+
+void ModificarVector(int v[], int n)
+{
+	int i,t=0,d,c=0;
+	int r;
+	bool k,u;
+	for (i=0;i<n;i++)
+	{
+		k=VerifFibo(v[i]);
+		if (k==true)
+		{
+			while(v[i]>0)
+			{
+				v[i]=v[i]/10;
+				t++;
+			}
+			r=(t*50)/100;
+			while(v[i]<0)
+			{
+				d=v[i]%10;
+				u=VerifPrimo(d);
+				if(u==true)
+				{
+					c++;
+				}
+				v[i]=v[i]/10;
+			}
+			if (c<=r)
+			{
+				cout << v[i];
+			}
+		}
+		cout << v[i];
+	}
+
+bool VerifFibo(int e)
+{
+	int i; 
+	int	a= -1,b=1;c;
+	bool t=false;
+	for (i=0;i<n;i++)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		if (e==c)
+		{
+			t=true;
+		}
+	}
+	return t;
+}
+bool VerifPrimo(int a)
+{
+	int i, c=0;
+    bool t=false;
+	for(i=2;i<10;i++)
+	{
+		if (d/i==0)
+		{
+			c++;
+		}
+	}
+	if (c==1)
+	{
+		t=true;
+	}
+	return t;
+}
