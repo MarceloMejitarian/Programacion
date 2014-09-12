@@ -1,0 +1,139 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void cargarvec(int vec[], int n)
+{
+	int i, d;
+	for (i=0;i<n;i++)
+	{
+		cin>>d;
+		vec[i]=d;
+	}
+}
+void mostrarvec(int vec[], int n)
+{
+	int i;
+	for (i=0;i<n;i++)
+	{
+		cout<<"vec["<<i<<"]="<<vec[i]<<endl;
+	}
+}
+int verificarfibo(int n)
+{
+	int i, a, b, c, cont;
+	a=-1; b=1;
+	for(i=0;i<n;i++)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		if(n==c)
+		{
+			cont++;
+		}
+	}
+	if (cont>0)
+	{
+		return(0);
+	}
+	else
+	{
+		return (1);
+	}
+}
+int verificarprimos(int n)
+{
+	int i, j, c=0, cont1=0, cont2=0, d;
+	while(n>0)
+	{
+		d=n%10;
+		j=1;
+		c=0;
+		while(j<d)
+		{
+			if(d%j==0)
+			{
+				c++;
+			}
+			j++;
+		}
+		n=n/10;
+		cont1++;
+		if(c>1);
+		{
+			cont2++;
+		}
+	}
+	if(cont2>(cont1)/2)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+void ordenarvec(int vec[], int n)
+{
+	int i, vec2[50], vec3[50], j=0, k, l, c=0, aux;
+	for(i=0;i<n;i++)
+	{
+		if(verificarfibo(vec[i])==0)
+		{
+			if(verificarprimos(vec[i]==0))
+			{
+				vec2[j]=vec[i];
+				j++;
+			}
+		}
+		else
+		{
+			vec3[c]=i;
+			c++;
+		}
+	}
+	for(l=0;l<j;l++)
+	{
+		for(k=i+1;k<j;k++)
+		{
+			if(vec2[l]>vec2[k])
+			{
+				aux=vec2[l];
+				vec2[l]=vec2[k];
+				vec2[k]=aux;
+			}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		k=0;
+		for(j=0;j<c;j++)
+		{
+		if(i==vec3[j])
+		{
+			vec[i]=vec[i];
+		}
+		else
+		{
+			vec[i]=vec2[k];
+			k++;
+		}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		cout<<vec[i];
+	}
+
+}
+void main()
+{
+	int vec[50], n;
+	cin>>n;
+	cargarvec(vec, n);
+	mostrarvec(vec,n);
+	ordenarvec(vec,n);
+	getch();
+
+	
+}
